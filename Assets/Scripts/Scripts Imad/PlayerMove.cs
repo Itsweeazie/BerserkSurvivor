@@ -3,17 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-  
-  public int speed = 10;
- 
-  // Update is called once per frame
-  void FixedUpdate () {
-    
-    float mouveHorizontal = Input.GetAxis("Horizontal");
-    float mouveVertical = Input.GetAxis("Vertical");
-    
-    Vector3 mouvment = new Vector3(mouveHorizontal, 0, mouveVertical);
-    GetComponent<Rigidbody>().AddForce(mouvment * speed * Time.deltaTime);
-    
-  }
+
+    public float vitesseDeplacement = 5f;
+
+    void Update()
+    {
+        PlayerMovements();
+    }
+
+    public void PlayerMovements(){
+        // Déplacement vers le haut
+        if (Input.GetKey(KeyCode.Z))
+        {
+            transform.Translate(Vector2.up * vitesseDeplacement * Time.deltaTime);
+        }
+
+        // Déplacement vers la droite
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Translate(Vector2.right * vitesseDeplacement * Time.deltaTime);
+        }
+
+        // Déplacement vers le bas
+        if (Input.GetKey(KeyCode.S))
+        {
+            transform.Translate(Vector2.down * vitesseDeplacement * Time.deltaTime);
+        }
+
+        // Déplacement vers la gauche
+        if (Input.GetKey(KeyCode.Q))
+        {
+            transform.Translate(Vector2.left * vitesseDeplacement * Time.deltaTime);
+        }
+    }
 }
