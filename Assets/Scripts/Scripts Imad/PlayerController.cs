@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float vitesseDeplacement = 5f;
+    private float vitesseDeplacement = 5f;
 
     void Update()
     {
@@ -21,6 +21,4 @@ public class PlayerController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * vitesseDeplacement * Time.deltaTime);
     }
-
-    public void PlayerAttacking(){}
 }

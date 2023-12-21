@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 9177942064394283851}
   - component: {fileID: 3257565312986996288}
   - component: {fileID: -9197095036045566915}
-  - component: {fileID: -8617349467359860618}
   - component: {fileID: 4794188953260624851}
   m_Layer: 0
   m_Name: playerAttack
@@ -97,19 +96,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4524c42b6c94cf345bdd2cba4a03f895, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyDelay: 1
---- !u!114 &-8617349467359860618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666299561502179675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c753520c5f26ce643aeb9a3e7bfa2a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &4794188953260624851

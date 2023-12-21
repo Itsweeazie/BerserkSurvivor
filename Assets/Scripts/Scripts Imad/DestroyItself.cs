@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class DestroyItself : MonoBehaviour
 {
-  public float destroyDelay = 1.0f; // Adjust this value to set the delay in seconds
+    private float destroyDelayMilliseconds = 1.8f; // Délai en millisecondes
+    private float startTime;
 
     void Start()
     {
-        StartCoroutine(DestroyAfterDelay());
+        startTime = Time.time;
     }
 
-    IEnumerator DestroyAfterDelay()
+    void Update()
     {
-        yield return new WaitForSeconds(destroyDelay);
-        Destroy(gameObject);
+        if (Time.time - startTime > destroyDelayMilliseconds)
+        {
+            Destroy(gameObject);
+        }
     }
 }
